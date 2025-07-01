@@ -1,15 +1,14 @@
 :root {
-	--primary: #333333;
-	--secondary: #F4F4F4;
-	--accent: #007BFF;
+	--primary: #2B2B2B;
+	--secondary: #EAEAEA;
+	--accent: #F9A825;
 	--headlinefont: 'Roboto', sans-serif;
 	--contentfont: 'Roboto', sans-serif;
-	--text-color: #333333;
-	--link-color: #007BFF;
 
 	--color-background: #FFFFFF;
-	--color-border: #EAEAEA;
-	--color-shadow: rgba(0, 0, 0, 0.1);
+	--color-border: #DADADA;
+	--color-text: #333333;
+	--color-link: #F9A825;
 }
 
 html, body {
@@ -17,20 +16,21 @@ html, body {
 	max-width: 100vw;
 	background: var(--color-background) !important;
 	font-family: var(--headlinefont);
-	color: var(--text-color);
+	color: var(--color-text);
 	line-height: 1.6;
 }
 
 .hl_page-preview--content,
 .hl_page-preview--content * {
 	font-family: var(--headlinefont) !important;
-	color: var(--text-color);
+	color: var(--color-text);
 }
 
+/* === HEADER === */
 #section-OCUM475QX7,
 .minimal_header {
 	background: var(--color-background) !important;
-	color: var(--text-color) !important;
+	color: var(--color-text) !important;
 	border-bottom: 1px solid var(--color-border);
 	box-shadow: none;
 	z-index: 3;
@@ -38,12 +38,14 @@ html, body {
 	padding: 20px 0;
 }
 
+/* === HEADINGS === */
 h1, h2, h3, .main_heading {
 	color: var(--primary) !important;
 	font-weight: 600;
 	letter-spacing: -0.02em;
 }
 
+/* === SUBHEADINGS === */
 .subheading {
 	color: var(--accent) !important;
 	font-weight: 500;
@@ -51,24 +53,26 @@ h1, h2, h3, .main_heading {
 	letter-spacing: 0.1em;
 }
 
+/* === BULLETS === */
 div.benefits_list,
 div.benefits_list * {
 	font-family: var(--headlinefont) !important;
-	color: var(--primary) !important;
+	color: var(--accent) !important;
 }
 
 div.benefits_list ul li::marker {
 	font-family: "Font Awesome 5 Free" !important;
 	font-weight: 700 !important;
-	color: var(--accent) !important;
+	color: var(--primary) !important;
 	font-size: 1.2em !important;
 }
 
+/* === BUTTONS === */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
 .hl_page-preview--content button {
-	background-color: var(--accent) !important;
+	background-color: var(--primary) !important;
 	border-radius: 50px !important;
 	border: none !important;
 	font-weight: 600 !important;
@@ -77,7 +81,7 @@ button,
 	overflow: hidden;
 	z-index: 1;
 	transition: all 0.3s ease;
-	box-shadow: 0 4px 12px var(--color-shadow);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 	color: #fff !important;
 	padding: 10px 20px;
 }
@@ -87,18 +91,20 @@ button,
 }
 
 button:hover {
-	transform: translateY(-3px) scale(1.05);
-	box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.1), 0 12px 24px rgba(0, 0, 0, 0.2);
+	transform: translateY(-2px) scale(1.02);
+	box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
+/* === VIDEO ROUNDED === */
 .video_frame,
 .video_frame iframe,
 .video_frame video {
 	border-radius: 15px !important;
 	overflow: hidden;
-	box-shadow: 0 6px 12px var(--color-shadow);
+	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
 }
 
+/* === STATIC GLOW (VISIBLE) === */
 .vsl_hero {
 	position: relative;
 	z-index: 2;
@@ -111,9 +117,9 @@ button:hover {
 	top: -150px;
 	left: 50%;
 	transform: translateX(-50%);
-	width: 1100px;
+	width: 1000px;
 	height: 600px;
-	background: radial-gradient(circle at center, rgba(206, 241, 123, 0.25), transparent 50%);
+	background: radial-gradient(circle at center, rgba(233, 196, 106, 0.35), transparent 50%);
 	filter: blur(80px);
 	opacity: 1;
 	pointer-events: none;
@@ -127,15 +133,16 @@ button:hover {
 		width: 100vw;
 		height: 300px;
 		top: -80px;
-		background: radial-gradient(circle at center, rgba(206, 241, 123, 0.2), transparent 60%);
+		background: radial-gradient(circle at center, rgba(233, 196, 106, 0.3), transparent 60%);
 		filter: blur(40px);
 	}
 }
 
+/* === LINK STYLES === */
 a,
 .hl_page-preview--content a {
 	position: relative;
-	color: var(--link-color) !important;
+	color: var(--color-link) !important;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
@@ -157,18 +164,20 @@ a:hover::after {
 	transform: scaleX(1);
 }
 
+/* === FOOTER PARAGRAPH + LINKS (Scoped to Footer Container) === */
 .minimal_footer .footer_copy {
 	color: var(--primary) !important;
-	font-size: 12px;
+	font-size: 14px;
 }
 
 [class^="paragraph-"] a, 
 [class^="paragraph-"][class*="footer_links"] a {
 	color: var(--primary) !important;
-	font-weight: 500 !important;
+	font-weight: bold !important;
 	text-decoration: underline !important;
 }
 
+/* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
 	h1, h2 {
 		font-size: 24px !important;
@@ -191,10 +200,12 @@ a:hover::after {
   	}
 }
 
+/* Hide original logo image */
 .image-container img.hl-optimized {
 	display: none !important;
 }
 
+/* Insert replacement SVG */
 .image-container::before {
 	content: '';
 	display: inline-block;
