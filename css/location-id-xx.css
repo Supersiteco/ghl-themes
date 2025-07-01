@@ -1,63 +1,58 @@
 :root {
-	--primary: #2B2B2B;
-	--secondary: #EAEAEA;
-	--accent: #F9A825;
-	--headlinefont: 'Roboto', sans-serif;
+	--primary: #2C3E50;
+	--secondary: #18BC9C;
+	--headlinefont: 'Poppins', sans-serif;
 	--contentfont: 'Roboto', sans-serif;
 
-	--color-background: #FFFFFF;
-	--color-border: #DADADA;
-	--color-text: #333333;
-	--color-link: #F9A825;
+	--color-background: #F8F9FA;
+	--color-border: #E0E0E0;
+	--color-muted: #B0BEC5;
+	--color-highlight: #FFFFFF;
+
+	--color-link: #18BC9C;
 }
 
 html, body {
 	overflow-x: hidden;
 	max-width: 100vw;
 	background: var(--color-background) !important;
-	font-family: var(--headlinefont);
-	color: var(--color-text);
-	line-height: 1.6;
+	font-family: var(--contentfont);
+	color: var(--primary);
 }
 
 .hl_page-preview--content,
 .hl_page-preview--content * {
-	font-family: var(--headlinefont) !important;
-	color: var(--color-text);
+	font-family: var(--contentfont) !important;
+	color: var(--primary);
 }
 
-/* === HEADER === */
 #section-OCUM475QX7,
 .minimal_header {
 	background: var(--color-background) !important;
-	color: var(--color-text) !important;
+	color: var(--primary) !important;
 	border-bottom: 1px solid var(--color-border);
 	box-shadow: none;
 	z-index: 3;
 	position: relative;
-	padding: 20px 0;
 }
 
-/* === HEADINGS === */
 h1, h2, h3, .main_heading {
 	color: var(--primary) !important;
 	font-weight: 600;
 	letter-spacing: -0.02em;
 }
 
-/* === SUBHEADINGS === */
 .subheading {
-	color: var(--accent) !important;
+	color: var(--secondary) !important;
 	font-weight: 500;
 	text-transform: uppercase;
 	letter-spacing: 0.1em;
 }
 
-/* === BULLETS === */
 div.benefits_list,
 div.benefits_list * {
-	font-family: var(--headlinefont) !important;
-	color: var(--accent) !important;
+	font-family: var(--contentfont) !important;
+	color: var(--secondary) !important;
 }
 
 div.benefits_list ul li::marker {
@@ -67,12 +62,11 @@ div.benefits_list ul li::marker {
 	font-size: 1.2em !important;
 }
 
-/* === BUTTONS === */
 button,
 .cbutton-STx-CdihXC,
 .cbutton-p9VpOUayG8,
 .hl_page-preview--content button {
-	background-color: var(--primary) !important;
+	background-color: var(--secondary) !important;
 	border-radius: 50px !important;
 	border: none !important;
 	font-weight: 600 !important;
@@ -81,9 +75,8 @@ button,
 	overflow: hidden;
 	z-index: 1;
 	transition: all 0.3s ease;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 	color: #fff !important;
-	padding: 10px 20px;
 }
 
 .main-heading-button {
@@ -91,20 +84,18 @@ button,
 }
 
 button:hover {
-	transform: translateY(-2px) scale(1.02);
-	box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.2), 0 10px 30px rgba(0, 0, 0, 0.3);
+	transform: translateY(-3px) scale(1.03);
+	box-shadow: 0 0 0px 2px rgba(0, 0, 0, 0.2), 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
-/* === VIDEO ROUNDED === */
 .video_frame,
 .video_frame iframe,
 .video_frame video {
 	border-radius: 15px !important;
 	overflow: hidden;
-	box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-/* === STATIC GLOW (VISIBLE) === */
 .vsl_hero {
 	position: relative;
 	z-index: 2;
@@ -119,7 +110,7 @@ button:hover {
 	transform: translateX(-50%);
 	width: 1000px;
 	height: 600px;
-	background: radial-gradient(circle at center, rgba(233, 196, 106, 0.35), transparent 50%);
+	background: radial-gradient(circle at center, rgba(24, 188, 156, 0.25), transparent 50%);
 	filter: blur(80px);
 	opacity: 1;
 	pointer-events: none;
@@ -132,17 +123,16 @@ button:hover {
 	.vsl_hero::before {
 		width: 100vw;
 		height: 300px;
-		top: -80px;
-		background: radial-gradient(circle at center, rgba(233, 196, 106, 0.3), transparent 60%);
+		top: -50px;
+		background: radial-gradient(circle at center, rgba(24, 188, 156, 0.2), transparent 60%);
 		filter: blur(40px);
 	}
 }
 
-/* === LINK STYLES === */
 a,
 .hl_page-preview--content a {
 	position: relative;
-	color: var(--color-link) !important;
+	color: var(--link-color) !important;
 	text-decoration: none;
 	transition: color 0.3s ease;
 }
@@ -164,20 +154,18 @@ a:hover::after {
 	transform: scaleX(1);
 }
 
-/* === FOOTER PARAGRAPH + LINKS (Scoped to Footer Container) === */
 .minimal_footer .footer_copy {
 	color: var(--primary) !important;
-	font-size: 14px;
+	font-size: 12px;
 }
 
 [class^="paragraph-"] a, 
 [class^="paragraph-"][class*="footer_links"] a {
 	color: var(--primary) !important;
-	font-weight: bold !important;
+	font-weight: 500 !important;
 	text-decoration: underline !important;
 }
 
-/* === RESPONSIVE HEADINGS === */
 @media screen and (max-width: 480px) {
 	h1, h2 {
 		font-size: 24px !important;
@@ -200,12 +188,10 @@ a:hover::after {
   	}
 }
 
-/* Hide original logo image */
 .image-container img.hl-optimized {
 	display: none !important;
 }
 
-/* Insert replacement SVG */
 .image-container::before {
 	content: '';
 	display: inline-block;
