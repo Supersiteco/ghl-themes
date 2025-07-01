@@ -1,89 +1,67 @@
 :root {
-    --primary-color: #0f0f0f;
-    --secondary-color: #ffffff;
-    --accent-color: #0070f3;
-    --background-color: #f7f7f7;
-    --text-color: #333333;
-    --font-family: 'Inter', sans-serif;
-    --font-size-base: 16px;
-    --line-height-base: 1.5;
-    --spacing-base: 1rem;
+    --font-family: 'Roboto', sans-serif;
+    --primary-color: #1D4ED8;
+    --secondary-color: #F9FAFB;
+    --accent-color: #3B82F6;
+    --text-color: #111827;
+    --background-color: #FFFFFF;
+    --border-color: #E5E7EB;
+    --spacing-small: 8px;
+    --spacing-medium: 16px;
+    --spacing-large: 32px;
+    --border-radius: 8px;
 }
 
-body {
+.company-profile {
     font-family: var(--font-family);
-    font-size: var(--font-size-base);
-    line-height: var(--line-height-base);
-    color: var(--text-color);
     background-color: var(--background-color);
-    margin: 0;
-    padding: 0;
+    color: var(--text-color);
+    padding: var(--spacing-large);
+    border-radius: var(--border-radius);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: var(--spacing-base);
-}
-
-.header {
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: calc(var(--spacing-base) * 2);
-    text-align: center;
-}
-
-.header h1 {
+.company-profile h1 {
     font-size: 2.5rem;
-    margin: 0;
+    margin-bottom: var(--spacing-medium);
 }
 
-.header p {
-    font-size: 1.2rem;
+.company-profile h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-small);
 }
 
-.button {
-    background-color: var(--accent-color);
-    color: var(--secondary-color);
-    padding: var(--spacing-base);
+.company-profile p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: var(--spacing-medium);
+}
+
+.company-profile .btn {
+    background-color: var(--primary-color);
+    color: #FFFFFF;
+    padding: var(--spacing-small) var(--spacing-medium);
     border: none;
-    border-radius: 4px;
+    border-radius: var(--border-radius);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: darken(var(--accent-color), 10%);
-}
-
-.card {
-    background-color: var(--secondary-color);
-    border: 1px solid #eaeaea;
-    border-radius: 8px;
-    padding: var(--spacing-base);
-    margin: var(--spacing-base);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-}
-
-.card h2 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.card p {
-    font-size: 1rem;
+.company-profile .btn:hover {
+    background-color: var(--accent-color);
 }
 
 @media (max-width: 768px) {
-    .header h1 {
+    .company-profile {
+        padding: var(--spacing-medium);
+    }
+    
+    .company-profile h1 {
         font-size: 2rem;
     }
 
-    .button {
-        width: 100%;
-    }
-    
-    .card {
-        margin: calc(var(--spacing-base) / 2);
+    .company-profile h2 {
+        font-size: 1.5rem;
     }
 }
